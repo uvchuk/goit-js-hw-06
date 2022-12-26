@@ -8,6 +8,7 @@ btnCreate.addEventListener("click", createBoxes);
 btnDestroy.addEventListener("click", destroyBoxes);
 
 const createdBoxes = [];
+let boxSize = 30;
 
 function onAmount() {
 	return numberRef.value;
@@ -18,8 +19,9 @@ function createBoxes(amount) {
 
 	for (let i = 0; i < amount; i += 1) {
 		const boxEl = document.createElement("div");
-		boxEl.style.width = "30px";
-		boxEl.style.height = "30px";
+		let size = boxSize + i * 10;
+		boxEl.style.width = `${size}px`;
+		boxEl.style.height = `${size}px`;
 		boxEl.style.backgroundColor = getRandomHexColor();
 		createdBoxes.push(boxEl);
 	}
