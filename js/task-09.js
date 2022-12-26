@@ -9,6 +9,6 @@ function getRandomHexColor() {
 }
 
 function onChangeBGColor() {
-	bodyRef.style.backgroundColor = getRandomHexColor();
-	colorValueRef.textContent = bodyRef.style.backgroundColor;
+	colorValueRef.textContent = getRandomHexColor();
+	bodyRef.style.backgroundColor = colorValueRef.textContent;
 }
